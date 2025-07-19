@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import Providers from "./providers/Providers";
-
+import "@fontsource/vazir/index.css";
 
 export const metadata: Metadata = {
   title: "Auth Task App",
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body>
+      <body style={{ fontFamily: "Vazir, sans-serif" }}>
         <Providers>{children}</Providers>
       </body>
     </html>
