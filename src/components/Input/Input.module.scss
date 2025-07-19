@@ -1,0 +1,31 @@
+.inputWrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  .input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    direction: ltr;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+      border-color: #0070f3;
+    }
+
+    &.error {
+      border-color: #e53e3e;
+    }
+  }
+
+  .errorMessage {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+  }
+}
