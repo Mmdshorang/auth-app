@@ -9,16 +9,6 @@ import Button from '../../components/Button/Button';
 import styles from './auth.module.scss';
 import { useUserStore } from '../stores/useUserStore';
 
-// تابع برای fetch کردن کاربر
-const fetchUser = async () => {
-  const response = await fetch('https://randomuser.me/api/?results=1&nat=us');
-  if (!response.ok) {
-    throw new Error('خطا در برقراری ارتباط با سرور');
-  }
-  const data = await response.json();
-  return data.results[0];
-};
-
 const AuthPage = () => {
   const [phone, setPhone] = useState('');
   const [validationError, setValidationError] = useState('');
